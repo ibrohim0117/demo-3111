@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #f6f5f1;
+            --text: #1c1c1a;
+            --accent: #0f766e;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #161715;
+                --text: #f1f0ea;
+                --accent: #2dd4bf;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding: 1.5rem;
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            text-align: center;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 3.5rem;
+            height: 4px;
+            margin: 1.25rem auto 0;
+            border-radius: 2px;
+            background: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Demo project</h1>
+    
+</body>
+</html>
